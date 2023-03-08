@@ -1,25 +1,88 @@
-<div class="row-layout group">
-  <button igxButton="raised" igxRipple class="button">
-    TEXT
-  </button>
-  <button igxButton="outlined" igxRipple class="button">
-    TEXT
-  </button>
-  <button igxButton="flat" igxRipple class="button">
-    TEXT
-  </button>
-</div>
-<div class="row-layout group">
-  <button igxButton="raised" igxRipple class="button">
-    Button Text
-  </button>
-  <button igxButton="outlined" igxRipple class="button">
-    <igx-icon>
-      add
-    </igx-icon>
-    <span>Button Text</span>
-  </button>
-  <button igxButton="flat" igxRipple class="button">
-    Button Text
-  </button>
+<div class="column-layout group">
+  <div class="row-layout group_1">
+    <button igxButton="raised" igxRipple class="button">
+      TEXT
+    </button>
+    <button igxButton="outlined" igxRipple class="button">
+      TEXT
+    </button>
+    <button igxButton="flat" igxRipple class="button">
+      TEXT
+    </button>
+  </div>
+  <div class="row-layout group_1">
+    <button igxButton="raised" igxRipple class="button">
+      Button Text
+    </button>
+    <button igxButton="outlined" igxRipple class="button">
+      <igx-icon>
+        add
+      </igx-icon>
+      <span>Button Text</span>
+    </button>
+    <button igxButton="flat" igxRipple class="button">
+      Button Text
+    </button>
+  </div>
+  <div class="row-layout group_1">
+    <igx-date-picker type="box" mode="dialog" [(ngModel)]="date" class="date-picker">
+      <label igxLabel>Date</label>
+    </igx-date-picker>
+    <igx-date-picker [(ngModel)]="date1" type="box" mode="dialog" class="date-picker">
+      <label igxLabel>Date</label>
+    </igx-date-picker>
+    <igx-date-picker [disabled]="true" type="box" mode="dialog" [(ngModel)]="date" class="date-picker">
+      <label igxLabel>Date</label>
+    </igx-date-picker>
+  </div>
+  <igx-tabs [disableAnimation]="true" class="tabs">
+    <igx-tab-item [selected]="true" class="tab-item">
+      <igx-tab-header>
+        <igx-icon igxTabHeaderIcon>info</igx-icon>
+        <span igxTabHeaderLabel>Label</span>
+      </igx-tab-header>
+      <igx-tab-content class="row-layout tab-item-content">
+        <igx-card type="outlined" *ngFor="let item of financialBoxOfficeRevenue" class="card">
+          <igx-card-media height="120px">
+            <img src="/assets/SketchParser.png" class="image" />
+          </igx-card-media>
+          <igx-card-header>
+            <h3 igxCardHeaderTitle>
+              Card Title
+            </h3>
+            <h5 igxCardHeaderSubtitle>
+              Card Subtitle
+            </h5>
+          </igx-card-header>
+          <igx-card-actions class="actions-content">
+            <button igxButton="raised" igxRipple class="button_1">
+              Button
+            </button>
+            <button igxButton="icon" igxRipple>
+              <igx-icon>
+                favorite
+              </igx-icon>
+            </button>
+            <button igxButton="icon" igxRipple>
+              <igx-icon>
+                bookmark
+              </igx-icon>
+            </button>
+            <button igxButton="icon" igxRipple>
+              <igx-icon>
+                share
+              </igx-icon>
+            </button>
+          </igx-card-actions>
+        </igx-card>
+      </igx-tab-content>
+    </igx-tab-item>
+    <igx-tab-item class="tab-item">
+      <igx-tab-header>
+        <igx-icon igxTabHeaderIcon>info</igx-icon>
+        <span igxTabHeaderLabel>Label</span>
+      </igx-tab-header>
+      <igx-tab-content class="row-layout tab-item-content_1"></igx-tab-content>
+    </igx-tab-item>
+  </igx-tabs>
 </div>
