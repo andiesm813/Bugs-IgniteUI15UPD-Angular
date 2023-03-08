@@ -4,12 +4,14 @@ import { Routes, RouterModule } from '@angular/router';
 import { PageNotFoundComponent } from './error-routing/not-found/not-found.component';
 import { UncaughtErrorComponent } from './error-routing/error/uncaught-error.component';
 import { ErrorRoutingModule } from './error-routing/error-routing.module';
-import { MasterViewComponent } from './master-view/master-view.component';
+import { MovieAppComponent } from './movie-app/movie-app.component';
+import { TestingComponentsComponent } from './testing-components/testing-components.component';
 
 export const routes: Routes = [
-  { path: '', redirectTo: 'master-view', pathMatch: 'full' },
+  { path: '', redirectTo: 'movie-app', pathMatch: 'full' },
   { path: 'error', component: UncaughtErrorComponent },
-  { path: 'master-view', component: MasterViewComponent, data: { text: 'Master View' } },
+  { path: 'movie-app', component: MovieAppComponent, data: { text: 'Movie-App' } },
+  { path: 'testing-components', component: TestingComponentsComponent, data: { text: 'Testing-Components' } },
   { path: '**', component: PageNotFoundComponent } // must always be last
 ];
 

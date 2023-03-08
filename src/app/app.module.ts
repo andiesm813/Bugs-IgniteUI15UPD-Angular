@@ -3,14 +3,17 @@ import { BrowserModule, HammerModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MasterViewComponent } from './master-view/master-view.component';
-import { IgxButtonModule, IgxRippleModule, IgxIconModule, IgxDatePickerModule, IgxInputGroupModule, IgxTabsModule, IgxCardModule } from '@infragistics/igniteui-angular';
+import { MovieAppComponent } from './movie-app/movie-app.component';
+import { IgxButtonModule, IgxRippleModule, IgxTabsModule, IgxCardModule, IgxIconModule, IgxSelectModule, IgxInputGroupModule, IgxDatePickerModule, IgxListModule, IgxAvatarModule, IgxNavbarModule, IgxNavigationDrawerModule } from '@infragistics/igniteui-angular';
 import { FormsModule } from '@angular/forms';
+import { TestingComponentsComponent } from './testing-components/testing-components.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MasterViewComponent
+    MovieAppComponent,
+    TestingComponentsComponent
   ],
   imports: [
     BrowserModule,
@@ -19,12 +22,18 @@ import { FormsModule } from '@angular/forms';
     BrowserAnimationsModule,
     IgxButtonModule,
     IgxRippleModule,
-    IgxIconModule,
-    IgxDatePickerModule,
-    IgxInputGroupModule,
     IgxTabsModule,
     IgxCardModule,
-    FormsModule
+    IgxIconModule,
+    IgxSelectModule,
+    IgxInputGroupModule,
+    IgxDatePickerModule,
+    IgxListModule,
+    IgxAvatarModule,
+    FormsModule,
+    IgxNavbarModule,
+    IgxNavigationDrawerModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
