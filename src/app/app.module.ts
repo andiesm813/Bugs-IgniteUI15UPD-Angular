@@ -7,13 +7,15 @@ import { MovieAppComponent } from './movie-app/movie-app.component';
 import { IgxButtonModule, IgxRippleModule, IgxTabsModule, IgxCardModule, IgxIconModule, IgxSelectModule, IgxInputGroupModule, IgxDatePickerModule, IgxListModule, IgxAvatarModule, IgxNavbarModule, IgxToggleModule, IgxNavigationDrawerModule } from '@infragistics/igniteui-angular';
 import { FormsModule } from '@angular/forms';
 import { TestingComponentsComponent } from './testing-components/testing-components.component';
+import { ImgResizingComponent } from './img-resizing/img-resizing.component';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     MovieAppComponent,
-    TestingComponentsComponent
+    TestingComponentsComponent,
+    ImgResizingComponent
   ],
   imports: [
     BrowserModule,

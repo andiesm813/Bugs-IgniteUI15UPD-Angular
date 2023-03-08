@@ -29,7 +29,7 @@
   <div class="view-container">
     <router-outlet></router-outlet>
   </div>
-  <igx-nav-drawer position="right" [pin]="true" [pinThreshold]="800" width="320px" #navDrawer class="nav-drawer">
+  <igx-nav-drawer [isOpen]="true" position="right" [pinThreshold]="0" width="320px" #navDrawer class="nav-drawer">
     <ng-template igxDrawer>
       <div igxDrawerItem igxRipple routerLink="/movie-app">
         <igx-icon class="icon">
@@ -42,6 +42,12 @@
           bug_report
         </igx-icon>
         <span>Testing Components</span>
+      </div>
+      <div igxDrawerItem igxRipple routerLink="/testing-components">
+        <igx-icon class="icon">
+          bug_report
+        </igx-icon>
+        <span>Image Resizing</span>
       </div>
     </ng-template>
   </igx-nav-drawer>

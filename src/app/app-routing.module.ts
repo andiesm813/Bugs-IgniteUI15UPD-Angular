@@ -6,12 +6,14 @@ import { UncaughtErrorComponent } from './error-routing/error/uncaught-error.com
 import { ErrorRoutingModule } from './error-routing/error-routing.module';
 import { MovieAppComponent } from './movie-app/movie-app.component';
 import { TestingComponentsComponent } from './testing-components/testing-components.component';
+import { ImgResizingComponent } from './img-resizing/img-resizing.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'movie-app', pathMatch: 'full' },
   { path: 'error', component: UncaughtErrorComponent },
   { path: 'movie-app', component: MovieAppComponent, data: { text: 'Movie-App' } },
   { path: 'testing-components', component: TestingComponentsComponent, data: { text: 'Testing-Components' } },
+  { path: 'img-resizing', component: ImgResizingComponent, data: { text: 'Img-Resizing' } },
   { path: '**', component: PageNotFoundComponent } // must always be last
 ];
 
