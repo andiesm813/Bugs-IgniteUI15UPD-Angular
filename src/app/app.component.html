@@ -1,6 +1,6 @@
 <igx-navbar class="navbar">
   <igx-navbar-action>
-    <button igxButton="icon" igxRipple>
+    <button igxButton="icon" igxRipple [igxToggleAction]="navDrawer">
       <igx-icon>
         menu
       </igx-icon>
@@ -29,7 +29,7 @@
   <div class="view-container">
     <router-outlet></router-outlet>
   </div>
-  <igx-nav-drawer [isOpen]="true" position="right" [pin]="true" [pinThreshold]="800" width="320px" class="nav-drawer">
+  <igx-nav-drawer position="right" [pin]="true" [pinThreshold]="800" width="320px" #navDrawer class="nav-drawer">
     <ng-template igxDrawer>
       <div igxDrawerItem igxRipple routerLink="/movie-app">
         <igx-icon class="icon">
